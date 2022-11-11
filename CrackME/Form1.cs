@@ -28,11 +28,11 @@ namespace CrackME
 
             if (textBox1.Text == password)
             {
-                MessageBox.Show("Complate", "Login Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Password Correct", "Complate", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Warning", "Passsword incourect!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Passsword incorrect!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
