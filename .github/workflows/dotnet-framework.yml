@@ -60,6 +60,7 @@ jobs:
       with:
         type: 'zip'
         filename: CrackME.zip
+        path: C:\builtfiles\CrackME
       
     - name: Create Release
       id: create_release
