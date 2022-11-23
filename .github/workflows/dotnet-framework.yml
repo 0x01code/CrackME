@@ -1,14 +1,6 @@
 name: CrackMe Build
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-  release:
-    types: released
+on: push
 
 jobs:
   build:
@@ -48,7 +40,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: |
-          D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        files: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
