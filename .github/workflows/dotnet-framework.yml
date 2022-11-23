@@ -66,8 +66,10 @@ jobs:
       uses: thedoctor0/zip-release@main
       with:
         type: 'zip'
-        filename: 'CrackME.zip'
-        path: C:\builtfiles\CrackME
+        filename: CrackME.zip
+        
+    - name: Display structure of downloaded files v2
+      run: ls -R
       
     - name: Create Release
       id: create_release
