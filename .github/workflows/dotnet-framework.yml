@@ -34,7 +34,7 @@ jobs:
     - name: Test Dir
       run: dir CrackME\bin\Release
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: CrackME
         path: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
