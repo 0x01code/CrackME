@@ -2,9 +2,8 @@ name: CrackMe Build
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    tags: 
+      - "v*.*.*"
 
 jobs:
   build:
@@ -47,4 +46,4 @@ jobs:
         files: |
           D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
       env:
-        token: ${{ github.token }}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
