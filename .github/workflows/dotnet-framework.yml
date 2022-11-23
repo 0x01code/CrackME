@@ -52,3 +52,12 @@ jobs:
         name: CrackME
         path: C:\builtfiles\CrackME
         if-no-files-found: error
+        
+    - uses: actions/download-artifact@v3
+      with:
+        name: CrackME
+        
+    - name: Display structure of downloaded files
+      run: ls -R
+      
+    
