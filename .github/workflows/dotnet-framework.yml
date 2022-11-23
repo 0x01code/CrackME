@@ -29,7 +29,13 @@ jobs:
       run: nuget restore $env:Solution_Name
 
     - name: Build the Solution
-      run: msbuild $env:Solution_Name
+      run: msbuild $env:Solution_Name /p:Configuration=Release
 
     - name: Test Dir
-      run: dir CrackME
+      run: dir CrackME\bin
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: dnSpy-netframework
+        path: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
+        if-no-files-found: error
