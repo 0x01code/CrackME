@@ -36,6 +36,6 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: dnSpy-netframework
+        name: CrackME
         path: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
         if-no-files-found: error
