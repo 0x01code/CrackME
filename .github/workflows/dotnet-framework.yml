@@ -32,7 +32,7 @@ jobs:
       run: msbuild $env:Solution_Name /p:Configuration=Release
 
     - name: Test Dir
-      run: dir CrackME\bin
+      run: dir CrackME\bin\Release
 
     - uses: actions/upload-artifact@v2
       with:
