@@ -1,6 +1,15 @@
 name: CrackMe Build
 
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  release:
+    types:
+      - released
 
 jobs:
   build:
@@ -29,15 +38,17 @@ jobs:
 
     - name: Test Dir
       run: dir CrackME\bin\Release
+      
+    - name: Create output directory
+      run: New-Item -ItemType Directory -Path C:\builtfiles\CrackME -Force > $null
+      continue-on-error: true
+      
+    - name:  Copy release files for upload
+      run: Copy-Item -Path CrackME\CrackME\CrackME\bin\Release\* -Destination C:\builtfiles\CrackME -Recurse
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v3.1.1
+      if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
       with:
         name: CrackME
-        path: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
+        path: C:\builtfiles\CrackME
         if-no-files-found: error
-        
-    - name: Create a new GitHub release if a new tag is pushed
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        files: D:\a\CrackME\CrackME\CrackME\bin\Release\CrackME.exe
