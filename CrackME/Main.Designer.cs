@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btn_find_password = new System.Windows.Forms.Button();
             this.btn_serial_key = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_login_db = new System.Windows.Forms.Button();
+            this.btn_http_requests = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_find_password
@@ -65,17 +68,43 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu";
             // 
+            // btn_login_db
+            // 
+            this.btn_login_db.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login_db.Location = new System.Drawing.Point(18, 124);
+            this.btn_login_db.Name = "btn_login_db";
+            this.btn_login_db.Size = new System.Drawing.Size(246, 65);
+            this.btn_login_db.TabIndex = 3;
+            this.btn_login_db.Text = "Database";
+            this.btn_login_db.UseVisualStyleBackColor = true;
+            this.btn_login_db.Click += new System.EventHandler(this.btn_login_db_Click);
+            // 
+            // btn_http_requests
+            // 
+            this.btn_http_requests.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_http_requests.Location = new System.Drawing.Point(270, 124);
+            this.btn_http_requests.Name = "btn_http_requests";
+            this.btn_http_requests.Size = new System.Drawing.Size(246, 65);
+            this.btn_http_requests.TabIndex = 4;
+            this.btn_http_requests.Text = "Http Request";
+            this.btn_http_requests.UseVisualStyleBackColor = true;
+            this.btn_http_requests.Click += new System.EventHandler(this.btn_http_requests_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 139);
+            this.ClientSize = new System.Drawing.Size(543, 203);
+            this.Controls.Add(this.btn_http_requests);
+            this.Controls.Add(this.btn_login_db);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_serial_key);
             this.Controls.Add(this.btn_find_password);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +115,7 @@
         private System.Windows.Forms.Button btn_find_password;
         private System.Windows.Forms.Button btn_serial_key;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_login_db;
+        private System.Windows.Forms.Button btn_http_requests;
     }
 }
