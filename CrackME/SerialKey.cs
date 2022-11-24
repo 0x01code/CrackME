@@ -21,7 +21,7 @@ namespace CrackME
         public int validate(string key)
         {
             Validate validate = new Validate();
-            validate.secretPhase = "eXmeEKNTF4gHHlmMHy44";
+            validate.secretPhase = this.secretPhase;
             validate.Key = key;
             if (validate.IsValid == false) {
                 return 0;
