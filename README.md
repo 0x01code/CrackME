@@ -1,6 +1,6 @@
 # CrackME
 
-[![.NET Framwork](https://github.com/0x01code/CrackME/actions/workflows/dotnet-framework.yml/badge.svg)](https://github.com/0x01code/CrackME/actions/workflows/dotnet-framework.yml)
+[![CrackMe Build](https://github.com/0x01code/CrackME/actions/workflows/build.yml/badge.svg)](https://github.com/0x01code/CrackME/actions/workflows/build.yml)
 
 ## Youtube Tutorial
 [สอน crack โปรแกรม ด้วย dnspy](https://www.youtube.com/watch?v=3inyl-nBh0w)
