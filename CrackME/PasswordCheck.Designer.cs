@@ -1,6 +1,6 @@
 ﻿namespace CrackME
 {
-    partial class Form1
+    partial class PasswordCheck
     {
         /// <summary>
         /// Required designer variable.
@@ -75,6 +75,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Password Check";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

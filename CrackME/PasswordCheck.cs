@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CrackME
 {
-    public partial class Form1 : Form
+    public partial class PasswordCheck : Form
     {
-        public Form1()
+        public PasswordCheck()
         {
             InitializeComponent();
         }
@@ -34,6 +34,11 @@ namespace CrackME
             {
                 MessageBox.Show("Passsword incorrect!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
