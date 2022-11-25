@@ -35,21 +35,27 @@ namespace CrackME
             string password = Convert.ToString(jsonFile["password"]);
             string constring = "Server=" + host + ";Database=" + database + ";Uid=" + username + ";Pwd=" + password + ";";
 
-            MySqlConnection con = new MySqlConnection(constring);
-            con.Open();
-            string query = "select fullname from users where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read())
+            try
             {
-                MessageBox.Show("Welcome " + reader["fullname"].ToString(), "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("username and password incorrect", "System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                MySqlConnection con = new MySqlConnection(constring);
+                con.Open();
+                string query = "select fullname from users where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader reader = cmd.ExecuteReader();
 
+                if (reader.Read())
+                {
+                    MessageBox.Show("Welcome " + reader["fullname"].ToString(), "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("username and password incorrect", "System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Connect Database Error", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DatabaseForm_FormClosing(object sender, FormClosingEventArgs e)
