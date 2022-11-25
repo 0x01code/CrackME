@@ -68,7 +68,7 @@ namespace CrackME
         private void btn_http_requests_Click(object sender, EventArgs e)
         {
             Hide();
-            DatabaseForm form = new DatabaseForm();
+            HttpRequestForm form = new HttpRequestForm();
             form.Show();
         }
     }
