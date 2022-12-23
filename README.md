@@ -2,7 +2,6 @@
 
 [![CrackMe Build](https://github.com/0x01code/CrackME/actions/workflows/build.yml/badge.svg)](https://github.com/0x01code/CrackME/actions/workflows/build.yml)
 [![Download Count](https://img.shields.io/github/downloads/0x01code/CrackME/total)](https://github.com/0x01code/CrackME/releases)
-[![GitHub watchers](https://badgen.net/github/watchers/0x01code/CrackME/)](https://GitHub.com/0x01code/CrackME/watchers/)
 [![GitHub forks](https://img.shields.io/github/forks/0x01code/CrackME.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/0x01code/CrackME/network/)
 [![GitHub stars](https://img.shields.io/github/stars/0x01code/CrackME.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/0x01code/CrackME/stargazers/)
 
