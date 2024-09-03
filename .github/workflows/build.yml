@@ -44,7 +44,7 @@ jobs:
           path: C:\builtfiles\CrackME
           if-no-files-found: error
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: CrackME
           path: C:\builtfiles\CrackME
